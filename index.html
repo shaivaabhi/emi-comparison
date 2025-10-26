@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EMI Comparison Tool</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f0f4f8; }
+    h1 { color: #333; }
+    label { display: block; margin-top: 10px; }
+    input, button { padding: 10px; margin-top: 5px; width: 250px; }
+    button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0056b3; }
+    .result { margin-top: 20px; font-weight: bold; background: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .affiliate-links { margin-top: 30px; }
+    .affiliate-links a { display: block; margin-bottom: 10px; color: #007bff; text-decoration: none; }
+    .affiliate-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <h1>Compare Your EMI Instantly</h1>
+  <label for="loanAmount">Loan Amount (₹):</label>
+  <input type="number" id="loanAmount" placeholder="e.g. 500000">
+
+  <label for="interestRate">Annual Interest Rate (%):</label>
+  <input type="number" id="interestRate" placeholder="e.g. 10">
+
+  <label for="loanTenure">Loan Tenure (Months):</label>
+  <input type="number" id="loanTenure" placeholder="e.g. 60">
+
+  <button onclick="calculateEMI()">Calculate EMI</button>
+
+  <div class="result" id="emiResult"></div>
+
+  <div class="affiliate-links">
+    <h2>Apply for Loans</h2>
+    <a href="https://gromo.in" target="_blank">Apply via GroMo</a>
+    <a href="https://earnkaro.com" target="_blank">Apply via EarnKaro</a>
+  </div>
+
+  <script>
+    function calculateEMI() {
+      let P = parse
